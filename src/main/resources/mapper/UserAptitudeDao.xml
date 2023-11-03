@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.my_simple_web.mapper.UserAptitudeDao">
+
+    <resultMap id="aptitude_map" type="com.example.my_simple_web.entity.UserAptitudePO">
+        <result column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="name" property="name"/>
+        <result column="mobile" property="mobile"/>
+        <result column="province" property="province"/>
+        <result column="city" property="city"/>
+        <result column="loan_amount" property="loanAmount"/>
+        <result column="credit_card" property="creditCard"/>
+        <result column="zhima" property="zhima"/>
+        <result column="zhima_score" property="zhimaScore"/>
+        <result column="company" property="company"/>
+        <result column="public_fund" property="publicFund"/>
+        <result column="car" property="car"/>
+        <result column="house" property="house"/>
+        <result column="house_extension" property="houseExtension"/>
+        <result column="insurance" property="insurance"/>
+        <result column="getway_income" property="getwayIncome"/>
+        <result column="level" property="level"/>
+        <result column="occupation" property="occupation"/>
+        <result column="house_state" property="houseState"/>
+        <result column="channel" property="channel"/>
+        <result column="weight" property="weight"/>
+        <result column="gender" property="gender"/>
+        <result column="create_by" property="createBy"/>
+        <result column="create_date" property="createDate"/>
+        <result column="update_by" property="updateBy"/>
+        <result column="update_date" property="updateDate"/>
+        <result column="car_price" property="carPrice"/>
+        <result column="overdue" property="overdue"/>
+        <result column="call_time" property="callTime"/>
+        <result column="extension" property="extension"/>
+    </resultMap>
+
+    <select id="getOneById" resultType="string">
+        select user_id
+        FROM user_aptitude
+        where id = #{id}
+    </select>
+</mapper>
